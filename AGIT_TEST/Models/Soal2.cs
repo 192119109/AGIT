@@ -39,4 +39,15 @@ namespace AGIT_TEST.Models
         public string PlanId { get; set; }
         public string OutputId { get; set; }
     }
+
+    public class TempHari
+    {
+        public int Senin { get; set; }
+        public int Selasa { get; set; }
+        public int Rabu { get; set; }
+        public int Kamis { get; set; }
+        public int Jumat { get; set; }
+        public int Sabtu { get; set; }
+        public int Minggu { get; set; }
+    }
 }

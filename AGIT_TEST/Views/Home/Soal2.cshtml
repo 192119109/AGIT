@@ -1,32 +1,32 @@
 ﻿@{
     ViewBag.Title = "Soal 2";
-    List<int> Output = new List<int>();
-    List<int> Input = new List<int>();
-    if (ViewBag.Output != null)
-    {
-        Output = ViewBag.Output;
-    }
-    else
-    {
-        Output = new List<int>() { 0, 0, 0, 0, 0, 0, 0 };
-    }
+    //List<int> Output = new List<int>();
+    //List<int> Input = new List<int>();
+    //if (ViewBag.Output != null)
+    //{
+    //    Output = ViewBag.Output;
+    //}
+    //else
+    //{
+    //    Output = new List<int>() { 0, 0, 0, 0, 0, 0, 0 };
+    //}
 
-    if (ViewBag.Input != null)
-    {
-        Input = ViewBag.Input;
-    }
-    else
-    {
-        Input = new List<int>() { 0, 0, 0, 0, 0, 0, 0 };
-    }
+    //if (ViewBag.Input != null)
+    //{
+    //    Input = ViewBag.Input;
+    //}
+    //else
+    //{
+    //    Input = new List<int>() { 0, 0, 0, 0, 0, 0, 0 };
+    //}
 }
 
 <div class="jumbotron">
     <h1>Soal 2</h1>
 </div>
 
-@using (Html.BeginForm("Soal2", "Home", FormMethod.Post, new { @class = "form-horizontal", id = "submitPlan" }))
-{
+@*@using (Html.BeginForm("Soal2", "Home", FormMethod.Post, new { @class = "form-horizontal", id = "submitPlan" }))
+{*@
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-6">
@@ -43,7 +43,7 @@
                             <th scope="row">Senin</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Input[0]" name="input" />
+                                    <input type="number" class="form-control" min="0" value="0" name="input" id="idInSenin"/>
                                 </div>
                             </td>
                         </tr>
@@ -51,7 +51,7 @@
                             <th scope="row">Selasa</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Input[1]" name="input" />
+                                    <input type="number" class="form-control" min="0" value="0" name="input" id="idInSelasa"/>
                                 </div>
                             </td>
                         </tr>
@@ -59,7 +59,7 @@
                             <th scope="row">Rabu</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Input[2]" name="input" />
+                                    <input type="number" class="form-control" min="0" value="0" name="input" id="idInRabu"/>
                                 </div>
                             </td>
                         </tr>
@@ -67,7 +67,7 @@
                             <th scope="row">Kamis</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Input[3]" name="input" />
+                                    <input type="number" class="form-control" min="0" value="0" name="input" id="idInKamis"/>
                                 </div>
                             </td>
                         </tr>
@@ -75,7 +75,7 @@
                             <th scope="row">Jum'at</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Input[4]" name="input" />
+                                    <input type="number" class="form-control" min="0" value="0" name="input" id="idInJumat"/>
                                 </div>
                             </td>
                         </tr>
@@ -83,7 +83,7 @@
                             <th scope="row">Sabtu</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Input[5]" name="input" />
+                                    <input type="number" class="form-control" min="0" value="0" name="input" id="idInSabtu"/>
                                 </div>
                             </td>
                         </tr>
@@ -91,7 +91,7 @@
                             <th scope="row">Minggu</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Input[6]" name="input" />
+                                    <input type="number" class="form-control" min="0" value="0" name="input"  id="idInMinggu"/>
                                 </div>
                             </td>
                         </tr>
@@ -112,7 +112,7 @@
                             <th scope="row">Senin</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Output[0]" readonly="readonly" />
+                                    <input type="number" class="form-control" min="0" value="0" readonly="readonly" id="idOutSenin"/>
                                 </div>
                             </td>
                         </tr>
@@ -120,7 +120,7 @@
                             <th scope="row">Selasa</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Output[1]" readonly="readonly" />
+                                    <input type="number" class="form-control" min="0" value="0" readonly="readonly" id="idOutSelasa"/>
                                 </div>
                             </td>
                         </tr>
@@ -128,7 +128,7 @@
                             <th scope="row">Rabu</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Output[2]" readonly="readonly" />
+                                    <input type="number" class="form-control" min="0" value="0" readonly="readonly" id="idOutRabu"/>
                                 </div>
                             </td>
                         </tr>
@@ -136,7 +136,7 @@
                             <th scope="row">Kamis</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Output[3]" readonly="readonly" />
+                                    <input type="number" class="form-control" min="0" value="0" readonly="readonly" id="idOutKamis"/>
                                 </div>
                             </td>
                         </tr>
@@ -144,7 +144,7 @@
                             <th scope="row">Jum'at</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Output[4]" readonly="readonly" />
+                                    <input type="number" class="form-control" min="0" value="0" readonly="readonly" id="idOutJumat"/>
                                 </div>
                             </td>
                         </tr>
@@ -152,7 +152,7 @@
                             <th scope="row">Sabtu</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Output[5]" readonly="readonly" />
+                                    <input type="number" class="form-control" min="0" value="0" readonly="readonly" id="idOutSabtu"/>
                                 </div>
                             </td>
                         </tr>
@@ -160,14 +160,47 @@
                             <th scope="row">Minggu</th>
                             <td>
                                 <div class="input-group input-group-sm mb-3">
-                                    <input type="number" class="form-control" min="0" value="@Output[6]" readonly="readonly" />
+                                    <input type="number" class="form-control" min="0" value="0" readonly="readonly" id="idOutMinggu"/>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <button type="submit" class="btn btn-primary col-md-12">Submit Plan</button>
+            <button type="button" class="btn btn-primary col-md-12" onclick="submit()">Submit Plan</button>
         </div>
     </div>
-}
+@*}*@
+
+
+<script>
+    function submit() {
+        var arr = [];
+        arr[0] = document.getElementById("idInSenin").value;
+        arr[1] = document.getElementById("idInSelasa").value;
+        arr[2] = document.getElementById("idInRabu").value;
+        arr[3] = document.getElementById("idInKamis").value;
+        arr[4] = document.getElementById("idInJumat").value;
+        arr[5] = document.getElementById("idInSabtu").value;
+        arr[6] = document.getElementById("idInMinggu").value;
+        console.log(arr);
+        $.ajax({
+            type: "POST",
+            url: "@Url.Action("Soal2_Logic","Home")",
+            data: {input : arr},
+            success: function (res) {
+                if (res.resMessage == "Success") {
+                    var _data = JSON.parse(res.data);
+                    console.log(_data);
+                    document.getElementById("idOutSenin").value = _data[0];
+                    document.getElementById("idOutSelasa").value = _data[1];
+                    document.getElementById("idOutRabu").value = _data[2];
+                    document.getElementById("idOutKamis").value = _data[3];
+                    document.getElementById("idOutJumat").value = _data[4];
+                    document.getElementById("idOutSabtu").value = _data[5];
+                    document.getElementById("idOutMinggu").value = _data[6];
+                }
+            }
+        })
+    }
+</script>
